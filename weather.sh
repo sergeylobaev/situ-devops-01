@@ -4,6 +4,7 @@
 OUTPUT="/var/www/html/index.html"
 
 CITY=$1
+UPDATED=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Получаем координаты через геокодер Open-Meteo
 GEO=$(curl -s "https://geocoding-api.open-meteo.com/v1/search?name=${CITY}&count=1&language=en&format=json")
